@@ -14,7 +14,10 @@ import com.blog.config.AppConstants;
 import com.blog.entity.Role;
 import com.blog.repository.RoleRepo;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
+@EnableSwagger2
 public class BlogAppApisApplication implements CommandLineRunner{
 
 	@Autowired

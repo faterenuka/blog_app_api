@@ -59,7 +59,7 @@ public class SecurityConfig{
         csrf()
         .disable()
         .authorizeHttpRequests()
-        .antMatchers("/api/v1/auth/login")//   
+        .antMatchers("/api/")//   v1/auth/login
         .permitAll()
         .antMatchers(HttpMethod.GET)
         .permitAll()
@@ -112,10 +112,10 @@ public class SecurityConfig{
 		return provider;
 	}
 	
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-//		
-//		auth.userDetailsService(this.customUserDetailsService).passwordEncoder(passwordEncoder());
-//	}
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+		
+		auth.userDetailsService(this.customUserDetailsService).passwordEncoder(passwordEncoder());
+	}
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
