@@ -54,7 +54,7 @@ spring.security.user.roles==Admin
 ### User
 ```
 Register User
-
+POST: http://localhost:8089/api/v1/auth/register
 {
     "id": 28,
     "name": "navya",
@@ -70,7 +70,7 @@ Register User
 }
 
  User Login
- 
+ POST: http://localhost:8089/api/v1/auth/login
 {
     "userName": "navya@gmail.com",
     "password": "navya@23"
@@ -79,6 +79,7 @@ Register User
 
 ### Post
 ```
+POST: http://localhost:8089/api/user/27/category/6/posts
 {
     "postId": 7,
     "title": "Title for Computer Science Post",
@@ -108,7 +109,7 @@ Register User
 }
 
 Upload Post with Image
-
+POST: http://localhost:8089/api/post/image/upload/6
 {
     "postId": 6,
     "title": "Title for Computer Science Post",
@@ -139,6 +140,7 @@ Upload Post with Image
 ```
 ### Category
 ```
+POST: http://localhost:8089/api/categories/
 {
     "categoryId": 6,
     "categoryTitle": "Computer Science ",
@@ -148,6 +150,7 @@ Upload Post with Image
 ```
 ### Comments
 ```
+POST: http://localhost:8089/api/post/4/comments
 {
     "commentId": 10,
     "content": "This is new comment of post 5"
@@ -155,8 +158,6 @@ Upload Post with Image
 ```
 
 # Backend
-
-## Swagger UI
 
 ## Thank You! Your Blog is Displayed : )
 [![SwaggerUI](https://github.com/faterenuka/blog_app_api/blob/main/images/thank-you-blogging.jpg?raw=true)](https://github.com/faterenuka/blog_app_api/blob/main/images/thank-you-blogging.jpg?raw=true)
